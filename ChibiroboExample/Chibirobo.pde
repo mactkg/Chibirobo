@@ -7,12 +7,11 @@ class Chibirobo {
     robo = new Serial(that, port, baud);
   }
   
-  void move(CHIBIROBO_WAY directionL, int pulseHzL, int distanceL,
-            CHIBIROBO_WAY directionR, int pulseHzR, int distanceR) {
+  void move(int pulseHzL, int distanceL, int pulseHzR, int distanceR) {
     int wayL = 0;
     int wayR = 0;
-    wayL = directionL == CHIBIROBO_WAY_FORWARD ? 0 : 1;
-    wayR = directionR == CHIBIROBO_WAY_FORWARD ? 0 : 1;
+    wayL = pulseHzL > 0 ? 0 : 1;
+    wayR = pulseHzR > 0 ? 0 : 1;
     robo.write(str(wayL)+","+str(pulseHzL)+","+str(distanceL)+","+
                str(wayR)+","+str(pulseHzR)+","+str(distanceR)+"\r");
   }

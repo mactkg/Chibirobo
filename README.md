@@ -13,14 +13,11 @@ Chibirobo(PApplet that, String port, int baud);
 
 ### 移動
 ```java
-Chibirobo.move(CHIBIROBO_WAY directionL, int pulseHzL, int distanceL
-               CHIBIROBO_WAY directionR, int pulseHzR, int distanceR);
+Chibirobo.move(int pulseHzL, int distanceL, int pulseHzR, int distanceR);
 ```
-- directionX: 回転方向
-  - 前進: CHIBIROBO_WAY_FORWARD
-  - 後退: CHIBIROBO_WAY_BACKWARD
 - pulseHzX: (多分)送ってるパルスの幅
   - speed = 1/pulseHzX
+  - マイナスで後退
 - distanceX: 進む量
 
 ### 停止
