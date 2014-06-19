@@ -1,6 +1,15 @@
 # Chibirobo
 tested on Processing 2.1.2
 
+## How to use within 140-character
+```java
+Chibirobo robo;
+void setup() {
+  robo = new Chibirobo(this, "/dev/cu.FireFly-A399-SPP", 9600);
+  robo.move(1000, 10000, 1000, 10000);
+}
+```
+
 ## Document
 ### コンストラクタ
 ```java
