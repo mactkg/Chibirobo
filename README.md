@@ -2,6 +2,9 @@
 tested on Processing 2.1.2
 
 ## How to use within 140-character
+- Run below the sketch after connect to Chibirobo using bluetooth.
+- BluetoothでChibiroboとつないだあとに以下を実行してみよう。
+
 ```java
 Chibirobo robo;
 void setup() {
@@ -9,6 +12,8 @@ void setup() {
   robo.move(1000, 10000, 1000, 10000);
 }
 ```
+- Chibirobo will move forward
+- Chibiroboが前に進むはずです
 
 ## Document
 ### コンストラクタ
