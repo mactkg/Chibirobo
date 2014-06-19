@@ -17,28 +17,28 @@ void draw() {
 void mousePressed() {
   if(mouseX < width/2-100 && mouseY < height/2-100) { // top-left
     println("top-left");
-    robo.move(CHIBIROBO_WAY_FORWARD,3000,10000,CHIBIROBO_WAY_FORWARD,1000,10000);
+    robo.move(3000, 10000, 1000, 10000);
   } else if(mouseX < width/2-100 && mouseY > height/2-100 && mouseY < height/2+100) { // center-left
     println("center-left");
-    robo.move(CHIBIROBO_WAY_BACKWARD,3000,10000,CHIBIROBO_WAY_FORWARD,3000,10000);
+    robo.move(-3000, 10000, 3000, 10000);
   } else if(mouseX > width/2+100 && mouseY < height/2-100) { // top-right
     println("top-right");
-    robo.move(CHIBIROBO_WAY_FORWARD,1000,10000,CHIBIROBO_WAY_FORWARD,3000,10000);
+    robo.move(1000, 10000, 3000, 10000);
   } else if(mouseX > width/2+100 && mouseY > height/2-100 && mouseY < height/2+100) { // center-right
     println("center-left");
-    robo.move(CHIBIROBO_WAY_FORWARD,3000,10000,CHIBIROBO_WAY_BACKWARD,3000,10000);
+    robo.move(3000, 10000, -3000, 10000);
   } else if(mouseX < width/2-100 && mouseY > height/2+100) { // bottom-left
     println("bottom-left");
-    robo.move(CHIBIROBO_WAY_BACKWARD,3000,10000,CHIBIROBO_WAY_BACKWARD,1000,10000);
+    robo.move(-3000, 10000, -1000, 10000);
   } else if(mouseX > width/2+100 && mouseY > height/2+100) { // bottom-right
     println("bottom-right");
-    robo.move(CHIBIROBO_WAY_BACKWARD,1000,10000,CHIBIROBO_WAY_BACKWARD,3000,10000);
+    robo.move(-1000, 10000, -3000, 10000);
   } else if(mouseX > width/2-100 && mouseX < width/2+100 && mouseY < width/2-100) { // top-center
     println("top-center");
-    robo.move(CHIBIROBO_WAY_FORWARD,3000,10000,CHIBIROBO_WAY_FORWARD,3000,10000);
+    robo.move(3000, 10000, 3000, 10000);
   } else if(mouseX > width/2-100 && mouseX < width/2+100 && mouseY > width/2+100) {// bottom-center
     println("bottom-center");
-    robo.move(CHIBIROBO_WAY_BACKWARD,3000,10000,CHIBIROBO_WAY_BACKWARD,3000,10000);
+    robo.move(-3000, 10000, -3000, 10000);
   }
 }
 
