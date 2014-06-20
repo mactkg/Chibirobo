@@ -12,8 +12,8 @@ class Chibirobo {
     int wayR = 0;
     wayL = pulseHzL > 0 ? 0 : 1;
     wayR = pulseHzR > 0 ? 0 : 1;
-    robo.write(str(wayL)+","+str(pulseHzL)+","+str(distanceL)+","+
-               str(wayR)+","+str(pulseHzR)+","+str(distanceR)+"\r");
+    robo.write(str(wayL)+","+str(abs(pulseHzL))+","+str(distanceL)+","+
+               str(wayR)+","+str(abs(pulseHzR))+","+str(distanceR)+"\r");
   }
   
   void stop() {
@@ -24,12 +24,3 @@ class Chibirobo {
     robo.stop();
   }
 }
-
-
-// implementation of virtual enum
-class CHIBIROBO_WAY {
-  CHIBIROBO_WAY() {}
-}
-
-final CHIBIROBO_WAY CHIBIROBO_WAY_FORWARD = new CHIBIROBO_WAY();
-final CHIBIROBO_WAY CHIBIROBO_WAY_BACKWARD = new CHIBIROBO_WAY();

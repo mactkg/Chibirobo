@@ -25,7 +25,7 @@ void mousePressed() {
     println("top-right");
     robo.move(1000, 10000, 3000, 10000);
   } else if(mouseX > width/2+100 && mouseY > height/2-100 && mouseY < height/2+100) { // center-right
-    println("center-left");
+    println("center-right");
     robo.move(3000, 10000, -3000, 10000);
   } else if(mouseX < width/2-100 && mouseY > height/2+100) { // bottom-left
     println("bottom-left");
@@ -43,6 +43,7 @@ void mousePressed() {
 }
 
 void mouseReleased(){
+  println("stop");
   robo.stop();
 }
 
